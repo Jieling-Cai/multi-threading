@@ -14,7 +14,6 @@ public class Train extends Entity {
       trains.put(name,new Train(name));
     }
     return trains.get(name);
-    // Change this method!
   }
 
 
