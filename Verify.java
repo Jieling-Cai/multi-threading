@@ -6,7 +6,6 @@ public class Verify {
   public static void verify(MBTA mbta, Log log) {
     mbta.checkStart();
     for (Event e : log.events()) {
-      //System.out.println(e);
       e.replayAndCheck(mbta);
     }
     mbta.checkEnd();
