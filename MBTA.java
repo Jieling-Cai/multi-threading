@@ -21,7 +21,6 @@ public class MBTA {
     line.setTrain_name(name,stations);
     line.setStation_name(stations);
     all_line.add(line);
-    //throw new UnsupportedOperationException();
   }
 
   // Adds a new planned journey to the simulation
@@ -42,9 +41,6 @@ public class MBTA {
     }
     for(Journey journey: all_journey){
       if(journey.passenger_name.curr_station != journey.station_name.get(0)) {
-        //System.out.println(journey.passenger_name);
-        //System.out.println(journey.passenger_name.curr_station);
-
         throw new UnsupportedOperationException();}
       if(journey.passenger_name.next_station != journey.station_name.get(1)) throw new UnsupportedOperationException();
       if(journey.passenger_name.onTrain != null) throw new UnsupportedOperationException();
@@ -84,7 +80,6 @@ public class MBTA {
 
   // adds simulation configuration from a file
   public void loadConfig(String filename) {
-    //Jsonclass c = new Jsonclass();
     Gson gson = new Gson();
     String s = Jsonclass.readJson(filename);
     Jsonclass c = gson.fromJson(s, Jsonclass.class);
@@ -96,6 +91,5 @@ public class MBTA {
       this.addJourney(name,c.trips.get(name));
 
     }
-    //throw new UnsupportedOperationException();
   }
 }
