@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class DeboardEvent implements Event {
-  //static { LogJson.registerEvent(DeboardEvent.class, "Deboard"); }
   public final Passenger p; public final Train t; public final Station s;
   public DeboardEvent(Passenger p, Train t, Station s) {
     this.p = p; this.t = t; this.s = s;
