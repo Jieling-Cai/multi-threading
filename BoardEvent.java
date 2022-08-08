@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class BoardEvent implements Event {
-  //static { LogJson.registerEvent(BoardEvent.class, "Board"); }
   public final Passenger p; public final Train t; public final Station s;
   public BoardEvent(Passenger p, Train t, Station s) {
     this.p = p; this.t = t; this.s = s;
