@@ -24,7 +24,6 @@ public class PassengerThread implements Runnable{
     }
 
     public void run() {
-        //Object obj = new Object();
         try {
             while (true) {
                 if (p.onTrain == null) {
@@ -61,7 +60,6 @@ public class PassengerThread implements Runnable{
                 }
 
             }
-            //Thread.interrupted();
         }
         catch (RuntimeException e){
             Thread.interrupted();
