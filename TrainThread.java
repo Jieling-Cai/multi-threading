@@ -18,9 +18,7 @@ public class TrainThread implements Runnable {
 
     public void run() {
         try {
-
             while (true) {
-
                 Station s1 = t.next_station;
                 synchronized (s1) {
                     if (t.next_station.isEmpty_station == false) {
@@ -31,9 +29,7 @@ public class TrainThread implements Runnable {
                             return;
                         }
                     }
-                    //log.train_moves(t, t.curr_station, t.next_station);
                     t.next_station.isEmpty_station = false;
-                    //t.curr_station = t.next_station;
                     t.curr_station.isEmpty_station = true;
                     Station s = t.curr_station;
                     synchronized (s) {
@@ -62,8 +58,6 @@ public class TrainThread implements Runnable {
         }catch (RuntimeException e){
             Thread.interrupted();
         }
-            //Thread.interrupted();
-
     }
 }
 
