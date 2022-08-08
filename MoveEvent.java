@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class MoveEvent implements Event {
-  //static { LogJson.registerEvent(MoveEvent.class, "Move"); }
   public final Train t; public final Station s1, s2;
   public MoveEvent(Train t, Station s1, Station s2) {
     this.t = t; this.s1 = s1; this.s2 = s2;
