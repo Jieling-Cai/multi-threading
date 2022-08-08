@@ -11,7 +11,6 @@ public class Passenger extends Entity {
     if(!passengers.containsKey(name)){
       passengers.put(name, new Passenger(name));
     }
-    // Change this method!
     return passengers.get(name);
   }
 }
